@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AuthService } from '../user/auth.sevice';
 
 @Component({
     selector: 'nav-bar',
@@ -11,5 +12,13 @@ import { Component } from "@angular/core";
     `]
 })
 export class NavbarComponent{
+
+    public userName: string; 
+    constructor(public authService: AuthService){
+    }
+
+    ngOnInit(){
+        this.userName = this.authService.currentIuser?.userName;
+    }
 
 }

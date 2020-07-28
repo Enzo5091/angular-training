@@ -15,9 +15,15 @@
       </div>
       <div class="col-md-6">
         <address>
-          <strong>Address:</strong><br />
-          {{event?.location?.address}}<br />
-          {{event?.location?.city}}, {{event?.location?.country}}
+          <div *ngIf="event?.location">
+            <strong>Address:</strong>
+            {{event.location.address}}<br />
+            {{event.location.city}}, {{event.location.country}}
+          </div>
+          <div *ngIf="event?.onlineUrl">
+            <strong>Online URL:</strong><br>
+            {{event.onlineUrl}}
+          </div>
         </address>
       </div>
     </div>
