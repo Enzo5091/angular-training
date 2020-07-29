@@ -11,7 +11,8 @@ import {
   EventRouteActivator,
   CreateSessionComponent,
   SessionListComponent,
-  CollapsibleWellComponent
+  CollapsibleWellComponent,
+  DurationPipe
 } from './events/index';
 
 import { NavbarComponent } from './nav/index';
@@ -35,7 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     Error404Component,
     CreateSessionComponent,
     SessionListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
